@@ -11,8 +11,8 @@ spec:
       app: archlab009-william
   strategy:
     rollingUpdate:
-      maxSurge: 25%
-      maxUnavailable: 25%
+      maxSurge: 40%
+      maxUnavailable: 0%
     type: RollingUpdate
   template:
     metadata:
