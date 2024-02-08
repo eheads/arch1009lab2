@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: william-deployment
+  labels:
+    app: archlab009-william
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: archlab009-william
+  template:
+    metadata:
+      labels:
+        app: archlab009-william
+    spec:
+      containers:
+      - name: archlab009-william
+        image: rivermaya/archlab009-william:1.0.0
+        ports:
+        - containerPort: 80
